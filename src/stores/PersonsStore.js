@@ -11,16 +11,16 @@ export const usePersonsStore = defineStore('personsStore', {
         "type": "Mega Gargantuan",
         "gender": "Female",
         "origin": {
-            "name": "Mega Gargantuan Kingdom",
-            "url": "https://rickandmortyapi.com/api/location/56"
+          "name": "Mega Gargantuan Kingdom",
+          "url": "https://rickandmortyapi.com/api/location/56"
         },
         "location": {
-            "name": "Mega Gargantuan Kingdom",
-            "url": "https://rickandmortyapi.com/api/location/56"
+          "name": "Mega Gargantuan Kingdom",
+          "url": "https://rickandmortyapi.com/api/location/56"
         },
         "image": "https://rickandmortyapi.com/api/character/avatar/269.jpeg",
         "episode": [
-            "https://rickandmortyapi.com/api/episode/31"
+          "https://rickandmortyapi.com/api/episode/31"
         ],
         "url": "https://rickandmortyapi.com/api/character/269",
         "created": "2017-12-31T14:01:44.995Z"
@@ -33,20 +33,20 @@ export const usePersonsStore = defineStore('personsStore', {
         "type": "Necrophiliac",
         "gender": "Male",
         "origin": {
-            "name": "Interdimensional Cable",
-            "url": "https://rickandmortyapi.com/api/location/6"
+          "name": "Interdimensional Cable",
+          "url": "https://rickandmortyapi.com/api/location/6"
         },
         "location": {
-            "name": "Interdimensional Cable",
-            "url": "https://rickandmortyapi.com/api/location/6"
+          "name": "Interdimensional Cable",
+          "url": "https://rickandmortyapi.com/api/location/6"
         },
         "image": "https://rickandmortyapi.com/api/character/avatar/418.jpeg",
         "episode": [
-            "https://rickandmortyapi.com/api/episode/8"
+          "https://rickandmortyapi.com/api/episode/8"
         ],
         "url": "https://rickandmortyapi.com/api/character/418",
         "created": "2018-04-15T21:43:43.867Z"
       }
     ]
   })
-})
+});

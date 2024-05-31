@@ -12,7 +12,7 @@
        <span class="card__info_span">Last known location:</span>
        <div class="card__info_span-name">{{ person.location.name }}</div>
         <span class="card__info_span">First seen in:</span>
-       <div class="card__info_span-name">{{ person.location.name }}</div>
+       <div class="card__info_span-name">{{ episod }}</div>
 
     </div>
   </div>
@@ -23,6 +23,11 @@ const props = defineProps({
     type: Object,
     required: true,
     default: () => { }
+  },
+  episod: {
+    type: String,
+    required: true,
+    default: () => ''
   }
 })
 
@@ -32,10 +37,10 @@ const props = defineProps({
   width: 600px;
   height: 220px;
   display: flex;
+  margin: 20px;
   overflow: hidden;
   background: rgb(60, 62, 68);
   border-radius: 0.5rem;
-  margin: 0.75rem;
   color: white;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
   &__image {
@@ -56,7 +61,6 @@ const props = defineProps({
     &_options {
       display: flex;
       align-items: center;
-      margin-left: 10px;
       &-point {
         display: block;
         width: 10px;
@@ -65,13 +69,13 @@ const props = defineProps({
         background: rgb(85, 204, 68);
       }
       &-status {
-        padding: 10px;
+        padding: 0 10px;
       }
       & span {
-        padding: 5px;
+        padding: 0 5px;
       }
       &-spec {
-        padding: 10px;
+        padding: 0 10px;
       }
     }
     &_span {
