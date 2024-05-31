@@ -7,14 +7,18 @@
     <h1>The Rick and Morty API</h1>
   </header>
   <div class="main">
-    <div class="maingrid__left"></div>
-    <div class="maingrid__right"></div>
+    <PersonCard v-for="person of personStore.persons" :key="person.id" :person="person"></PersonCard>
+    <div class="main__left"></div>
+    <div class="main__right"></div>
+    <!-- <PersonCard :person="personStore.person"></PersonCard> -->
   </div>
 
 </template>
 
 <script setup>
+import PersonCard from './components/PersonCard.vue'
 import {usePersonsStore } from './stores/PersonsStore'
+
 const personStore = usePersonsStore()
 
 </script>
@@ -30,6 +34,9 @@ h1 {
 }
 .main {
   display: flex;
+  width: 80%;
+  height: 500px;
+  margin: 0 auto;
 }
 
 </style>

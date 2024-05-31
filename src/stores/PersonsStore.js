@@ -4,52 +4,48 @@ export const usePersonsStore = defineStore('personsStore', {
   state: () => ({
     persons: [
       {
-        "id": 1,
-        "name": "Rick Sanchez",
+        "id": 269,
+        "name": "Presidentress of The Mega Gargantuans",
         "status": "Alive",
-        "species": "Human",
-        "type": "",
-        "gender": "Male",
+        "species": "Humanoid",
+        "type": "Mega Gargantuan",
+        "gender": "Female",
         "origin": {
-          "name": "Earth",
-          "url": "https://rickandmortyapi.com/api/location/1"
+            "name": "Mega Gargantuan Kingdom",
+            "url": "https://rickandmortyapi.com/api/location/56"
         },
         "location": {
-          "name": "Earth",
-          "url": "https://rickandmortyapi.com/api/location/20"
+            "name": "Mega Gargantuan Kingdom",
+            "url": "https://rickandmortyapi.com/api/location/56"
         },
-        "image": "https://rickandmortyapi.com/api/character/avatar/1.jpeg",
+        "image": "https://rickandmortyapi.com/api/character/avatar/269.jpeg",
         "episode": [
-          "https://rickandmortyapi.com/api/episode/1",
-          "https://rickandmortyapi.com/api/episode/2",
-          // ...
+            "https://rickandmortyapi.com/api/episode/31"
         ],
-        "url": "https://rickandmortyapi.com/api/character/1",
-        "created": "2017-11-04T18:48:46.250Z"
+        "url": "https://rickandmortyapi.com/api/character/269",
+        "created": "2017-12-31T14:01:44.995Z"
       },
       {
-        "id": 2,
-        "name": "Morty Smith",
+        "id": 418,
+        "name": "Mrs. Sullivan's Boyfriend",
         "status": "Alive",
         "species": "Human",
-        "type": "",
+        "type": "Necrophiliac",
         "gender": "Male",
         "origin": {
-          "name": "Earth",
-          "url": "https://rickandmortyapi.com/api/location/1"
+            "name": "Interdimensional Cable",
+            "url": "https://rickandmortyapi.com/api/location/6"
         },
         "location": {
-          "name": "Earth",
-          "url": "https://rickandmortyapi.com/api/location/20"
+            "name": "Interdimensional Cable",
+            "url": "https://rickandmortyapi.com/api/location/6"
         },
-        "image": "https://rickandmortyapi.com/api/character/avatar/2.jpeg",
+        "image": "https://rickandmortyapi.com/api/character/avatar/418.jpeg",
         "episode": [
-          "https://rickandmortyapi.com/api/episode/1",
-          "https://rickandmortyapi.com/api/episode/2",
-          // ...
+            "https://rickandmortyapi.com/api/episode/8"
         ],
-        "url": "https://rickandmortyapi.com/api/character/2",
-        "created": "2017-11-04T18:50:21.651Z"
+        "url": "https://rickandmortyapi.com/api/character/418",
+        "created": "2018-04-15T21:43:43.867Z"
       }
     ]
   })
