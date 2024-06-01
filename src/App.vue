@@ -1,30 +1,59 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
+
 </script>
 
 <template>
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://vuejs.org/" target="_blank">
-      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-    </a>
+  <header class="header">
+    <h1>The Rick and Morty API</h1>
+  </header>
+  <div class="main">
+    <PersonCard 
+      v-for="person of personStore.persons" 
+      :key="person.id" 
+      :person="person"
+      :episod="getEpisodName(`${person.episode}`)">
+    </PersonCard>
   </div>
-  <HelloWorld msg="Vite + Vue" />
+
 </template>
 
-<style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+<script setup>
+import PersonCard from './components/PersonCard.vue'
+import {usePersonsStore } from './stores/PersonsStore'
+import {useEpisodsStore } from './stores/EpisodsStore'
+
+const personStore = usePersonsStore()
+const episodStore = useEpisodsStore()
+
+const getEpisodName = ((adr) => {
+  const url = adr
+  const strs = url.split('/')
+  const id = strs.at(-1)
+  console.log(id)
+  let episodsAll = episodStore.episods
+  let name = episodsAll.find(ep => ep.id == id).name
+  console.log(name)
+  return name
+}) 
+
+
+
+</script>
+
+<style lang="scss" scoped>
+h1 {
+  margin: 0;
+  padding: 20px 0;
+  color: rgb(32, 35, 41);
+  border: none;
+  font-weight: 900;
+  font-size: 3.625rem;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+.main {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 20px;
 }
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
-}
+
 </style>
