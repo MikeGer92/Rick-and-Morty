@@ -6,7 +6,7 @@ export const usePersonsStore = defineStore('personsStore', {
       {
         "id": 269,
         "name": "Presidentress of The Mega Gargantuans",
-        "status": "Alive",
+        "status": "unknown",
         "species": "Humanoid",
         "type": "Mega Gargantuan",
         "gender": "Female",

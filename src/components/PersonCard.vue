@@ -4,7 +4,7 @@
     <div class="card__info">
        <div class="card__info_name">{{ person.name }}</div>
        <div class="card__info_options">
-        <div class="card__info_options-point"></div>
+        <div :class="{'card__info_options-alive': true,'card__info_options-dead': person.status == 'Dead', 'card__info_options-unknown': person.status == 'unknown' }"></div>
         <div class="card__info_options-status">{{ person.status }}</div>
         <span> - </span>
         <div class="card__info_options-spec">{{ person.species }}</div>
@@ -61,12 +61,18 @@ const props = defineProps({
     &_options {
       display: flex;
       align-items: center;
-      &-point {
+      &-alive {
         display: block;
         width: 10px;
         height: 10px;
         border-radius: 100%;
         background: rgb(85, 204, 68);
+      }
+      &-dead {
+        background: rgb(214, 61, 46);
+      }
+      &-unknown {
+        background: rgb(122, 122, 122);
       }
       &-status {
         padding: 0 10px;
