@@ -13,9 +13,6 @@
       :person="person"
       :episod="getEpisodName(`${person.episode}`)">
     </PersonCard>
-    <div class="main__left"></div>
-    <div class="main__right"></div>
-    <!-- <PersonCard :person="personStore.person"></PersonCard> -->
   </div>
 
 </template>
@@ -50,11 +47,12 @@ h1 {
   color: rgb(32, 35, 41);
   border: none;
   font-weight: 900;
-  font-size: 5.625rem;
+  font-size: 3.625rem;
 }
 .main {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   margin: 20px;
 }
 

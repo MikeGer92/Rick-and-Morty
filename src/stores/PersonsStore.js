@@ -46,6 +46,94 @@ export const usePersonsStore = defineStore('personsStore', {
         ],
         "url": "https://rickandmortyapi.com/api/character/418",
         "created": "2018-04-15T21:43:43.867Z"
+      },
+      {
+        "id": 336,
+        "name": "Steven Phillips",
+        "status": "Alive",
+        "species": "Alien",
+        "type": "Unknown-nippled alien",
+        "gender": "Male",
+        "origin": {
+            "name": "Unity's Planet",
+            "url": "https://rickandmortyapi.com/api/location/28"
+        },
+        "location": {
+            "name": "Unity's Planet",
+            "url": "https://rickandmortyapi.com/api/location/28"
+        },
+        "image": "https://rickandmortyapi.com/api/character/avatar/336.jpeg",
+        "episode": [
+            "https://rickandmortyapi.com/api/episode/14"
+        ],
+        "url": "https://rickandmortyapi.com/api/character/336",
+        "created": "2018-01-10T16:44:51.702Z"
+      },
+      {
+        "id": 448,
+        "name": "Gear Cop",
+        "status": "Dead",
+        "species": "Alien",
+        "type": "Gear-Person",
+        "gender": "Male",
+        "origin": {
+            "name": "Gear World",
+            "url": "https://rickandmortyapi.com/api/location/57"
+        },
+        "location": {
+            "name": "Gear World",
+            "url": "https://rickandmortyapi.com/api/location/57"
+        },
+        "image": "https://rickandmortyapi.com/api/character/avatar/448.jpeg",
+        "episode": [
+            "https://rickandmortyapi.com/api/episode/13"
+        ],
+        "url": "https://rickandmortyapi.com/api/character/448",
+        "created": "2018-05-01T13:38:21.237Z"
+      },
+      {
+        "id": 725,
+        "name": "Tony Galopagus",
+        "status": "Alive",
+        "species": "Human",
+        "type": "",
+        "gender": "Male",
+        "origin": {
+            "name": "Earth (Replacement Dimension)",
+            "url": "https://rickandmortyapi.com/api/location/20"
+        },
+        "location": {
+            "name": "Earth (Replacement Dimension)",
+            "url": "https://rickandmortyapi.com/api/location/20"
+        },
+        "image": "https://rickandmortyapi.com/api/character/avatar/725.jpeg",
+        "episode": [
+            "https://rickandmortyapi.com/api/episode/44"
+        ],
+        "url": "https://rickandmortyapi.com/api/character/725",
+        "created": "2021-10-17T10:01:10.143Z"
+      },
+      {
+        "id": 758,
+        "name": "Giant Assassin Hidden in the Statue of Liberty",
+        "status": "Alive",
+        "species": "Robot",
+        "type": "",
+        "gender": "Female",
+        "origin": {
+            "name": "France",
+            "url": "https://rickandmortyapi.com/api/location/119"
+        },
+        "location": {
+            "name": "Earth (Replacement Dimension)",
+            "url": "https://rickandmortyapi.com/api/location/20"
+        },
+        "image": "https://rickandmortyapi.com/api/character/avatar/758.jpeg",
+        "episode": [
+            "https://rickandmortyapi.com/api/episode/47"
+        ],
+        "url": "https://rickandmortyapi.com/api/character/758",
+        "created": "2021-10-17T14:59:32.923Z"
       }
     ]
   })
