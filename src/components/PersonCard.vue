@@ -13,7 +13,6 @@
        <div class="card__info_span-name">{{ person.location.name }}</div>
         <span class="card__info_span">First seen in:</span>
        <div class="card__info_span-name">{{ episod }}</div>
-
     </div>
   </div>
 </template>
