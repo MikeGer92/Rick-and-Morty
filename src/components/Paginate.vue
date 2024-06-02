@@ -1,37 +1,40 @@
 <template>
   <div class="paginate">
      <PaginationBar 
-     v-model="pageNumberOperate" 
-    :total-row="totalRow"
-    :page-size-menu="false"
-    :pageSize="pageSize"
-    :info="false"
-    :first="true"
-    :last="true"
+      v-model="pageNumberOperate" 
+      :total-row="totalRow"
+      :page-size-menu="false"
+      :info="false"
+      :first="true"
+      :last="true"
+      @change="getPage"
      />
   </div>
 
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { computed, ref, watch } from 'vue' 
+import { usePersonsStore } from '../stores/PersonsStore'
 
-const pageNumberOperate = ref(5)
-const totalRow = ref(100)
-// const pageSize = ref(20)
+const props = defineProps({
+  getPage: {
+    type: Function,
+    required: true,
+  },
+})
 
-// function goToInputPage () {
-//   if (!inputPageNumber.value) return
+const personStore = usePersonsStore()
+let pageNumberOperate = ref(1)
+const currPage = computed(() => personStore.currPage)
+const maxPage = computed(() => personStore.maxPage);
+const totalRow = computed(() => maxPage.value * 10);
 
-//   const newPageNumber = Number(inputPageNumber.value)
-
-//   if (window.isNaN(newPageNumber)) {
-//     inputPageNumber.value = ''
-//     return
-//   }
-//   pageNumberOperate.value = newPageNumber
-// }
-
+watch(currPage, () => {
+  if (currPage.value === 1) {
+    pageNumberOperate = currPage.value
+  }
+})
 
 </script>
 <style lang="scss">

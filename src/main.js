@@ -8,7 +8,7 @@ import { PaginationBar } from 'v-page'
 const app = createApp(App);
 
 app
-  .use(PaginationBar, {pageSize: 20, border: true, align:'center'})
+  .use(PaginationBar, { border: true, align:'left'})
   .use(createPinia())
   .mount('#app')
  
