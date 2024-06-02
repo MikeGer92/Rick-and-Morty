@@ -38,13 +38,18 @@
       :episod="getEpisodName(`${person.episode[0]}`)">
     </PersonCard>
   </div>
+  <Paginate></Paginate>
 
 </template>
 
 <script setup>
 import PersonCard from './components/PersonCard.vue'
+import Paginate from './components/Paginate.vue'
 import { usePersonsStore } from './stores/PersonsStore'
 import { ref, onBeforeMount } from 'vue'
+
+
+const page = ref(1)
 
 const selected = ref('')
 const selectedStatus = ref('')

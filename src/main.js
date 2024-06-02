@@ -2,6 +2,17 @@ import { createPinia } from 'pinia'
 import { createApp } from 'vue'
 import './assets/main.css'
 import App from './App.vue'
-import { Axios } from 'axios'
+import { PaginationBar } from 'v-page'
 
-createApp(App).use(createPinia()).mount('#app')
+
+const app = createApp(App);
+
+app
+  .use(PaginationBar, {pageSize: 20, border: true, align:'center'})
+  .use(createPinia())
+  .mount('#app')
+ 
+  
+ 
+
+
