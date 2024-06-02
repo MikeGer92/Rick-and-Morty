@@ -44,7 +44,7 @@
 <script setup>
 import PersonCard from './components/PersonCard.vue'
 import { usePersonsStore } from './stores/PersonsStore'
-import { ref } from 'vue'
+import { ref, onBeforeMount } from 'vue'
 
 const selected = ref('')
 const selectedStatus = ref('')
@@ -54,6 +54,10 @@ const personStore = usePersonsStore()
 const getApi = () => {
   personStore.getAllPersons()
 }
+
+onBeforeMount(() => {
+  getApi()
+})
 
 const getEpisodName = (adr) => {
   const url = adr
